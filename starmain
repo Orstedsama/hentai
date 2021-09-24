@@ -1,0 +1,121 @@
+-- 
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local main1 = Instance.new("TextButton")
+local cream = Instance.new("TextButton")
+local spin = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+main.Position = UDim2.new(0.0284495018, 0, 0.0201342478, 0)
+main.Size = UDim2.new(0, 220, 0, 146)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+NAMEOFBUTTONHERE.MouseButton1Down:connect(function()
+	Scripthere
+end)
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(165, 180, 186)
+title.Size = UDim2.new(0, 220, 0, 50)
+title.Font = Enum.Font.SourceSans
+title.Text = "Project Star"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextSize = 14.000
+
+
+
+
+main1.Name = "main1"
+main1.Parent = main
+main1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main1.Position = UDim2.new(0, 0, 0.337789536, 0)
+main1.Size = UDim2.new(0, 110, 0, 50)
+main1.Font = Enum.Font.SourceSans
+main1.Text = "Main"
+main1.TextColor3 = Color3.fromRGB(0, 0, 0)
+main1.TextSize = 14.000
+
+SpeedFarm.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/SenseiJoshy/CastAways/main/Main/CastAways.lua"))()
+end)
+
+cream.Name = "cream"
+cream.Parent = main
+cream.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cream.Position = UDim2.new(0.5, 0, 0.337789536, 0)
+cream.Size = UDim2.new(0, 110, 0, 50)
+cream.Font = Enum.Font.SourceSans
+cream.Text = "Cream Farm"
+cream.TextColor3 = Color3.fromRGB(0, 0, 0)
+cream.TextSize = 14.000
+
+CreamFarm.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/Dungeon-Farm"), true))()
+end)
+
+spin.Name = "spin"
+spin.Parent = main
+spin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+spin.Position = UDim2.new(0, 0, 0.655031085, 0)
+spin.Size = UDim2.new(0, 110, 0, 50)
+spin.Font = Enum.Font.SourceSans
+spin.Text = "Auto Spin"
+spin.TextColor3 = Color3.fromRGB(0, 0, 0)
+spin.TextSize = 14.000
+
+AutoSpin.MouseButton1Down:connect(function()
+	_G.Darby = true
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/PJ-Darby"))()
+end)
+
+Close.Name = "Close"
+Close.Parent = main
+Close.BackgroundColor3 = Color3.fromRGB(113, 113, 113)
+Close.Position = UDim2.new(0.763636351, 0, 0, 0)
+Close.Size = UDim2.new(0, 52, 0, 30)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "Close"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+close.MouseButton1Down:connect(function()
+	main.Visible = false
+	openmain.Visible = True
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmain.Position = UDim2.new(0.0284494758, 0, 0.246979877, 0)
+openmain.Size = UDim2.new(0, 91, 0, 22)
+openmain.Active = true
+openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+open.Position = UDim2.new(1.67679005e-07, 0, 0, 0)
+open.Size = UDim2.new(0, 90, 0, 22)
+open.Font = Enum.Font.SourceSans
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(0, 0, 0)
+open.TextSize = 14.000
+
+open.MouseButton1Down:connect(function()
+	openmain.Visible = false
+	main.Visible = true
+end)
