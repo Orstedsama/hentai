@@ -1,0 +1,99 @@
+-- orstedsama
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local MainFarm = Instance.new("TextButton")
+local CreamDungeon = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+--Properties:
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.new(0, 0, 0)
+main.Position = UDim2.new(0.0203577988, 0, 0.641277611, 0)
+main.Size = UDim2.new(0, 332, 0, 211)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.new(1, 0, 1)
+title.Size = UDim2.new(0, 332, 0, 31)
+title.Font = Enum.Font.GothamBold
+title.Text = "Project Star"
+title.TextColor3 = Color3.new(0, 0, 0)
+title.TextSize = 14
+
+MainFarm.Name = "MainFarm"
+MainFarm.Parent = main
+MainFarm.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+MainFarm.Position = UDim2.new(0.036144577, 0, 0.379146934, 0)
+MainFarm.Size = UDim2.new(0, 110, 0, 50)
+MainFarm.Font = Enum.Font.GothamBold
+MainFarm.Text = "Main Farm"
+MainFarm.TextColor3 = Color3.new(0, 0, 0)
+MainFarm.TextScaled = true
+MainFarm.TextSize = 10
+MainFarm.TextWrapped = true
+MainFarm.MouseButton1Down:connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SenseiJoshy/CastAways/main/Main/CastAways.lua"))()
+
+end)
+
+CreamDungeon.Name = "CreamDungeon"
+CreamDungeon.Parent = main
+CreamDungeon.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+CreamDungeon.Position = UDim2.new(0.614457846, 0, 0.379146934, 0)
+CreamDungeon.Size = UDim2.new(0, 110, 0, 50)
+CreamDungeon.Font = Enum.Font.GothamBold
+CreamDungeon.Text = "Cream Dungeon"
+CreamDungeon.TextColor3 = Color3.new(0, 0, 0)
+CreamDungeon.TextScaled = true
+CreamDungeon.TextSize = 14
+CreamDungeon.TextWrapped = true
+CreamDungeon.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Tobias020108Back/YBA-AUT/main/Dungeon-Farm"), true))()
+end)
+
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.new(1, 0, 0)
+close.Position = UDim2.new(0.879518092, 0, 0, 0)
+close.Size = UDim2.new(0, 40, 0, 31)
+close.Font = Enum.Font.GothamBlack
+close.Text = "X"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+close.MouseButton1Down:connect(function()
+main.Visible = false
+openmain.Visible = true
+end)
+
+openmain.Name = "openmain"
+openmain.Parent = ScreenGui
+openmain.BackgroundColor3 = Color3.new(1, 1, 1)
+openmain.Position = UDim2.new(0.00801973976, 0, 0.423832953, 0)
+openmain.Size = UDim2.new(0, 100, 0, 28)
+openmain.Active = true
+openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = openmain
+open.BackgroundColor3 = Color3.new(1, 0, 0)
+open.Size = UDim2.new(0, 100, 0, 28)
+open.Font = Enum.Font.GothamBold
+open.Text = "OPEN"
+open.TextColor3 = Color3.new(0, 0, 0)
+open.TextSize = 18
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+openmain.Visible = false
+main.Visible = true
+end)
